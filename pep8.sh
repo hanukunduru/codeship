@@ -9,6 +9,6 @@ echo $num_errors_after
 if (( $num_errors_after < $num_errors_before )); then
     git commit -a -m "PEP-8 Fix"
     git config --global push.default current # Push only to the current branch.
-    git push --quiet
+    git push origin master --quiet
 fi
 find . -name \*.py -exec pep8 --ignore=E402 {} +
